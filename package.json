@@ -1,0 +1,31 @@
+{
+  "name": "cyberport-glassbox",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Hypothesis Engine in a Glass Box - OMMAX x Cyberport demo",
+  "scripts": {
+    "dev": "concurrently -k -n SERVER,VITE -c blue,magenta \"npm:server\" \"npm:client\"",
+    "server": "node --use-system-ca server/index.js",
+    "client": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "lucide-react": "^1.33.0",
+    "openai": "^7.5.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.0",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "vite": "^6.0.7"
+  }
+}

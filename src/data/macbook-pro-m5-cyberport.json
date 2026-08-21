@@ -1,0 +1,204 @@
+{
+  "_note": "Real outside-in dataset assembled from the linked Cyberport PDP and user-provided screenshots. Review text is preserved in the original language. Price and rating values reflect the supplied screenshot snapshot and may differ from the live page.",
+  "meta": {
+    "source": "cyberport.de product page + supplied review screenshots",
+    "collectedAt": "2026-08-21",
+    "outsideInPublicDataOnly": true,
+    "snapshotNote": "Screenshots show 1,499.00 EUR, 4.8/5 and 14 reviews; the live page may have changed since capture."
+  },
+  "product": {
+    "sku": "1A01-6FZ",
+    "manufacturerNumber": "MDE04D/A",
+    "name": "Apple MacBook Pro 14\" 2025 M5/16/512 GB 10C CPU 10C GPU Space Schwarz MDE04D/A",
+    "brand": "Apple",
+    "category": "Notebook / MacBook Pro",
+    "url": "https://www.cyberport.de/notebook-und-tablet/macbooks/pdp/1A01-6FZ/Apple-MacBook-Pro-14--2025-M5-16-512-GB-10C-CPU-10C-GPU-Space-Schwarz-MDE04D-A.html"
+  },
+  "price": {
+    "currency": "EUR",
+    "current": 1499.00,
+    "listUvp": 1799.00,
+    "discountPercent": 17,
+    "savings": 300.00,
+    "financingFrom": "0% Finanzierung ab 62,46 EUR/Monat",
+    "flexUp": "48 Monate, 32,04 EUR/Monat, 5,47% effektiver Jahreszins",
+    "availability": "Online sofort verfügbar",
+    "shipping": "Versand ab 6,99 EUR"
+  },
+  "competitor": null,
+  "page": {
+    "headline": "Apple MacBook Pro 14\" 2025 M5/16/512 GB 10C CPU 10C GPU Space Schwarz MDE04D/A",
+    "badges": ["Sale", "Autorisierter Apple Händler"],
+    "bullets": [
+      "35,97 cm (14,2 Zoll) Liquid Retina XDR Display mit miniLED und 120 Hz",
+      "Apple M5 Chip mit 10-Core CPU, 10-Core GPU und Apple Neural Engine",
+      "16 GB RAM und 512 GB SSD",
+      "Bis zu 24 Stunden Batterielaufzeit",
+      "Drei Thunderbolt 4 Anschlüsse, HDMI 2.1, SDXC, MagSafe 3 und Kopfhöreranschluss"
+    ],
+    "specHighlightsAboveFold": ["M5 Chip", "Liquid Retina XDR Display", "16 GB RAM / 512 GB SSD", "Sale-Preis", "Online-Verfügbarkeit"],
+    "buriedOrBelowFold": [
+      "Netzteil separat erhältlich",
+      "Cyberport FlexUp mit 5,47% effektivem Jahreszins",
+      "Unterstützung für bis zu zwei externe Displays",
+      "12 MP Center Stage Kamera, drei Mikrofone in Studioqualität und sechs Lautsprecher",
+      "Konfigurationsvarianten für RAM, SSD, Chip und Nanotexturglas"
+    ],
+    "ctaPrimary": "In den Warenkorb",
+    "ctaSecondary": "Verfügbarkeit prüfen",
+    "trustSignals": ["Autorisierter Apple Händler", "Online sofort verfügbar", "AppleCare+ verfügbar"],
+    "observedIssues": [
+      "Die Produktbeschreibung enthält stellenweise ältere M3-Marketingmodule neben der M5-Konfiguration.",
+      "Das separat zu bestellende Netzteil ist erst im Datenblatt sichtbar.",
+      "Finanzierung und FlexUp werden als unterschiedliche Zahlungsmodelle dargestellt."
+    ]
+  },
+  "specs": {
+    "chip": "Apple M5, 10-Core CPU, 10-Core GPU, Apple Neural Engine",
+    "ram": "16 GB LPDDR5X Unified Memory, 9600 MHz",
+    "ssd": "512 GB",
+    "display": "14,2 Zoll Liquid Retina XDR, 3024 x 1964, miniLED, 120 Hz, entspiegelt, 1000 Nit",
+    "ports": "3x Thunderbolt 4 / USB-C, HDMI 2.1, SDXC, MagSafe 3, Kopfhöreranschluss",
+    "weight": "1,55 kg",
+    "battery": "72,4 Wh, bis zu 24 Stunden",
+    "powerAdapter": "Separat erhältlich; 60-96 W USB PD 3.1",
+    "camera": "12 MP Center Stage / 1080p FaceTime HD",
+    "wireless": "Wi-Fi 6E, Bluetooth 5.3",
+    "os": "macOS Sequoia",
+    "externalDisplays": "Bis zu zwei externe Displays"
+  },
+  "ratingSummary": {
+    "average": 4.8,
+    "count": 14,
+    "verifiedByRetailer": false,
+    "distribution": { "5": 13, "4": 0, "3": 0, "2": 1, "1": 0 }
+  },
+  "reviews": [
+    {
+      "id": "m5-r01",
+      "rating": 2,
+      "title": "Nicht empfehlenswert",
+      "author": "Arbeitsbiene",
+      "verified": false,
+      "date": "2026-08-12",
+      "text": "Die Optik und Haptik ist wirklich schön. Ich kann die positiven Bewertungen dennoch nicht verstehen. Ich habe mehrere Software-Probleme damit - seit 6 Monaten doktort Apple daran rum. Die Bedienung und Menüführung ist einfach grauenvoll. Taskpad reagiert nur hin und wieder. Unbrauchbar zum Arbeiten. Definitiv nie wieder einen Mac."
+    },
+    {
+      "id": "m5-r02",
+      "rating": 5,
+      "title": "MacBook Pro M5 Maschine",
+      "author": "Bartor77",
+      "verified": false,
+      "date": "2026-07-30",
+      "text": "Super zufrieden. Top Gerät macht Spaß damit zu arbeiten. Hätte vlt. auf 16Zoll gehen können. Beim nächsten Mal. Nichts zu meckern. Lieferung Ablauf auch alles TOP."
+    },
+    {
+      "id": "m5-r03",
+      "rating": 5,
+      "title": "Great product, excellent quality",
+      "author": "Chrystian",
+      "verified": false,
+      "date": "2026-07-25",
+      "text": "Very good product and high quality, I do recommend."
+    },
+    {
+      "id": "m5-r04",
+      "rating": 5,
+      "title": "Begeistert!",
+      "author": "Anna.M.",
+      "verified": false,
+      "date": "2026-06-28",
+      "text": "Mein neues Mac Book kam in Originalverpackung und ungeöffnet. Er läuft einwandfrei und erleichtert mir meine Arbeiten immens. Bin auch sehr begeistert von Cyberport."
+    },
+    {
+      "id": "m5-r05",
+      "rating": 5,
+      "title": "Sehr gutes Produkt",
+      "author": "WoKi",
+      "verified": false,
+      "date": "2026-05-26",
+      "text": "Bin mit dem Produkt bisher sehr zufrieden - nur die Laufzeit des Akkus könnte etwas länger sein. Dieses Problem habe ich leider bei all meinen Geräten von Apple. Ansonsten ein wirklich sehr gutes Produkt."
+    },
+    {
+      "id": "m5-r06",
+      "rating": 5,
+      "title": "leistungsfähig und elegant",
+      "author": "Ristretto",
+      "verified": false,
+      "date": "2026-04-21",
+      "text": "Ich habe mich für dieses Gerät entschieden wegen seines Displays, der hochauflösenden Kamera, der Mikrofone und des Soundsystems für gute Videotelefonie. Ich bin wieder sehr zufrieden mit der Qualität des Gehäuses, der Akkulaufzeit, dem leuchtenden Bildschirm und insgesamt allen Funktionen. Ein MacBook Pro wird weiterhin mein mobiles Büro bleiben."
+    },
+    {
+      "id": "m5-r07",
+      "rating": 5,
+      "title": "Alles wie immer super",
+      "author": "Kybercunde01",
+      "verified": false,
+      "date": "2026-04-21",
+      "text": "Seit 15 Jahren nutze ich das MacBook pro und was soll man sagen, jede Generation ist besser als die davor, da ist dieses keine Ausnahme."
+    },
+    {
+      "id": "m5-r08",
+      "rating": 5,
+      "title": "Super Gerät",
+      "author": "TechSpezi",
+      "verified": false,
+      "date": "2026-04-03",
+      "text": "Gute Verarbeitung, schneller Rechner für den Einstieg in die MacBook Pro Klasse optimal."
+    },
+    {
+      "id": "m5-r09",
+      "rating": 5,
+      "title": "Sehr gut",
+      "author": "JBJB",
+      "verified": false,
+      "date": "2026-04-02",
+      "text": "Sehr gelungenes Laptop. Schnell, leise, Tastatur, Bildschirm, Klang - keine Wünsche offen. Wärmste Empfehlungen."
+    },
+    {
+      "id": "m5-r10",
+      "rating": 5,
+      "title": "Top. Rasend schnell.",
+      "author": "Bingo303",
+      "verified": false,
+      "date": "2026-03-01",
+      "text": "Nach 10 Jahren mal wieder ausgetauscht. Die Geräte sind per se unfassbar teuer, aber zeig mir mal einen Windowsrechner, der 10 Jahre hält. Preis/Leistung stimmt also."
+    },
+    {
+      "id": "m5-r11",
+      "rating": 5,
+      "title": "Ein mehr als sinnvolles Upgrade",
+      "author": "AM_R",
+      "verified": false,
+      "date": "2026-01-23",
+      "text": "Mein erster Mac: ein vor zwei Jahren gekauftes 13 Zoll MacBook Air M3 (16/512). Ein, wie ich finde, toller Einstieg. Da ich mit der Zeit immer intensivere Anwendungen nutzte und mich regelmäßig über die doch eher begrenzten Anschlussmöglichkeiten des Air ärgerte, sollte dieses MacBook Pro M5 (24/1024) DAS Upgrade für mich für die nächsten Jahre sein. Ich wurde nicht enttäuscht. Das MacBook Pro ist in nahezu allen Belangen deutlich besser und ein tolles Upgrade. Klasse Bildschirm. Spürbar schneller. Der Lüfter ist wenn überhaupt, kaum hörbar - das war eine Angst beim Umstieg vom lautlosen, weil Lüfter-losen Air. Die Anschlüsse sind hier in absolut zufrieden stellender Anzahl und Qualität vorhanden. Nettes und beeindruckendes Extra ist der hervorragende Klang - solange das Display aufgeklappt ist. Denn zugeklappt (hochkant in einem Dock) klang mein Air etwas besser, natürlicher. Zum Schluss noch ein kleiner Kritikpunkt, der aber offensichtlich ist: Air -> Pro heißt auch Gewichtszuwachs."
+    },
+    {
+      "id": "m5-r12",
+      "rating": 5,
+      "title": "Jederzeit wieder",
+      "author": null,
+      "verified": false,
+      "date": "2025-12-21",
+      "text": "Als jahrelanger Apple-Nutzer habe ich mich nach nunmehr 12 Jahren dazu entschieden, ein neues MacBook Pro (Grundmodell) zu kaufen und bin begeistert. Für meine Zwecke (hauptsächlich Office-Anwendungen mit z.T. ziemlich aufwändigen PowerPoint-Präsentationen) reicht diese Konfiguration vollkommen aus. Das entspricht den Kommentaren in diversen Fachmagazinen. Einziger Nachteil aus meiner Sicht: Das extra zu bestellende Netzteil. Beschreibung, Preis, Lieferzeit, Verpackung sind - nach meinen bisherigen Erfahrungen - bei Cyberport immer bestens. Vielen Dank und weiter so!"
+    },
+    {
+      "id": "m5-r13",
+      "rating": 5,
+      "title": "Sehr gutes Produkt! In der Konfiguration M5",
+      "author": "GEOPLUS",
+      "verified": false,
+      "date": "2025-12-13",
+      "text": "Umstieg von i5+8+512 auf M5+16+1TB nach 7 Jahren. Bin sehr zufrieden. Preis/Leistung ist ok."
+    },
+    {
+      "id": "m5-r14",
+      "rating": 5,
+      "title": "Sehr gutes Produkt",
+      "author": "Marcsch",
+      "verified": false,
+      "date": "2025-11-30",
+      "text": "Sehr guter Laptop zum angemessenen, aber hohen Preis - halt Apple. Wenn der genauso lange hält wie der Vorgänger ist es ok."
+    }
+  ]
+}

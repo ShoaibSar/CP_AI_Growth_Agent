@@ -1,0 +1,101 @@
+{
+  "_note": "SWAP THIS FILE to run on real cyberport.de data. Keep the same shape. The LLM reasons live over whatever is in `reviews`, `page`, `specs`, `price`, and `competitor`. Reviews are kept in ORIGINAL GERMAN on purpose.",
+  "meta": {
+    "source": "cyberport.de (representative demo dataset — replace with real export/paste)",
+    "collectedAt": "2026-08-20",
+    "outsideInPublicDataOnly": true
+  },
+  "product": {
+    "sku": "3611F71",
+    "name": "Apple MacBook Air 13\" (2024), M3 8-Core CPU, 8-Core GPU, 16 GB RAM, 256 GB SSD",
+    "brand": "Apple",
+    "category": "Notebook / Ultrabook",
+    "url": "https://www.cyberport.de/.../apple-macbook-air-13-m3.html"
+  },
+  "price": {
+    "currency": "EUR",
+    "current": 1199.00,
+    "listUvp": 1299.00,
+    "financingFrom": "ab 33,31 €/Monat (36 Monate, 0% eff. Jahreszins)",
+    "availability": "Auf Lager, Lieferung 1-2 Werktage",
+    "shipping": "Versandkostenfrei"
+  },
+  "competitor": {
+    "retailer": "notebooksbilliger.de",
+    "sameSku": "Apple MacBook Air 13\" M3 16GB/256GB",
+    "price": 1149.00,
+    "note": "Wettbewerber listet identische SKU 50 € günstiger; bewirbt zusätzlich '0% Finanzierung' und 'geprüfte B-Ware' als Alternative."
+  },
+  "page": {
+    "headline": "MacBook Air 13\" M3 — dünn, leicht, den ganzen Tag Akku",
+    "bullets": [
+      "Apple M3 Chip mit 8-Core CPU und bis zu 10-Core GPU",
+      "Bis zu 18 Stunden Batterielaufzeit",
+      "13,6\" Liquid Retina Display, 500 Nits",
+      "1080p FaceTime HD Kamera",
+      "MagSafe 3 Ladeanschluss, zwei Thunderbolt-Anschlüsse"
+    ],
+    "specHighlightsAboveFold": ["Chip", "Display", "Akku"],
+    "buriedOrBelowFold": [
+      "Unterstützung für zwei externe Displays NUR bei geschlossenem Deckel",
+      "256 GB SSD nutzt einen einzelnen NAND-Chip (langsamer als 512 GB Variante)",
+      "Nur zwei Thunderbolt-Ports, kein HDMI/SD",
+      "Lieferumfang: 30W Netzteil (kein Dual-USB-C Adapter)"
+    ],
+    "ctaPrimary": "In den Warenkorb",
+    "ctaSecondary": "Finanzierung berechnen",
+    "trustSignals": ["Trusted Shops", "Kostenlose Rücksendung 30 Tage", "Fachhändler seit 1998"]
+  },
+  "specs": {
+    "chip": "Apple M3, 8-Core CPU, 8-Core GPU",
+    "ram": "16 GB Unified Memory",
+    "ssd": "256 GB",
+    "display": "13,6\" Liquid Retina, 2560x1664, 500 Nits",
+    "ports": "2x Thunderbolt / USB 4, MagSafe 3, 3,5-mm-Kopfhörer",
+    "weight": "1,24 kg",
+    "battery": "bis zu 18 Std.",
+    "os": "macOS",
+    "externalDisplays": "1 externes Display bei offenem Deckel; 2 nur bei geschlossenem Deckel"
+  },
+  "ratingSummary": {
+    "average": 4.3,
+    "count": 34,
+    "distribution": { "5": 19, "4": 9, "3": 3, "2": 2, "1": 1 }
+  },
+  "reviews": [
+    { "id": "r01", "rating": 5, "title": "Perfekt für unterwegs", "author": "Thomas K.", "verified": true, "date": "2026-07-14", "text": "Unglaublich leicht und der Akku hält bei mir locker einen ganzen Arbeitstag im Home-Office und im Zug. Lüfterlos, absolut lautlos. Für Office, Mails und Videocalls das beste Gerät, das ich je hatte." },
+    { "id": "r02", "rating": 4, "title": "Top Gerät, aber Speicher zu knapp", "author": "Sabine M.", "verified": true, "date": "2026-07-02", "text": "Sehr schönes Notebook, aber 256 GB sind 2026 einfach zu wenig. Nach Installation der Programme und ein paar Fotos war die SSD schon halb voll. Hätte gern die 512-GB-Version genommen, aber die war im Konfigurator schwer zu finden." },
+    { "id": "r03", "rating": 5, "title": "Endlich lautlos arbeiten", "author": "Michael R.", "verified": true, "date": "2026-06-28", "text": "Komme von einem alten Intel-MacBook, das ständig laut wurde. Das M3 bleibt kühl und leise, selbst bei Lightroom. Bildschirm ist super hell." },
+    { "id": "r04", "rating": 3, "title": "Nur ein externer Monitor?!", "author": "Andreas W.", "verified": true, "date": "2026-06-20", "text": "Was mir vorher niemand gesagt hat: Man kann standardmäßig nur EINEN externen Monitor anschließen. Für mein Setup mit zwei Bildschirmen im Büro brauche ich einen Umweg über 'Deckel zu'. Das war auf der Produktseite nicht klar ersichtlich, sonst hätte ich das Pro genommen." },
+    { "id": "r05", "rating": 5, "title": "Preis-Leistung stimmt", "author": "Julia B.", "verified": true, "date": "2026-06-15", "text": "Für 1199 € ein faires Angebot, gerade mit den 16 GB RAM. Habe vorher lange verglichen — bei anderen Händlern war die 8-GB-Version ähnlich teuer." },
+    { "id": "r06", "rating": 4, "title": "Gutes Business-Notebook", "author": "Firmenkunde / IT", "verified": true, "date": "2026-06-10", "text": "Wir haben fünf Stück für unser Vertriebsteam bestellt. Verarbeitung erstklassig, MDM-Integration lief problemlos. Einziger Kritikpunkt: nur zwei Ports, wir mussten für alle noch USB-C-Hubs dazukaufen. Ein Bundle-Angebot mit Dock wäre praktisch gewesen." },
+    { "id": "r07", "rating": 5, "title": "Display ist ein Traum", "author": "Nina S.", "verified": true, "date": "2026-06-05", "text": "Das Liquid Retina Display ist gestochen scharf und hell genug fürs Arbeiten am Fenster. Farben top für meine Grafikarbeit." },
+    { "id": "r08", "rating": 2, "title": "256 GB reichen nicht", "author": "Kevin H.", "verified": true, "date": "2026-05-30", "text": "Enttäuscht. Nach zwei Wochen war der Speicher voll. Für den Preis hätte mehr SSD drin sein müssen. Die günstigere Basisvariante mit weniger RAM sollte man meiden, aber auch hier ist 256 GB zu wenig." },
+    { "id": "r09", "rating": 5, "title": "Akkulaufzeit wie versprochen", "author": "Petra L.", "verified": true, "date": "2026-05-22", "text": "Die 18 Stunden sind bei normaler Nutzung tatsächlich fast erreichbar. Lade den Rechner nur noch alle zwei Tage. Perfekt für Uni und Bahn." },
+    { "id": "r10", "rating": 4, "title": "Schnelle Lieferung, gutes Gerät", "author": "Stefan D.", "verified": true, "date": "2026-05-18", "text": "War am nächsten Tag da. Gerät wie erwartet. Frage mich nur, ob sich der Aufpreis zum M2 lohnt — dazu stand auf der Seite wenig Vergleichendes." },
+    { "id": "r11", "rating": 5, "title": "Leicht wie ein Blatt", "author": "Carolin V.", "verified": true, "date": "2026-05-12", "text": "1,24 kg merkt man im Rucksack kaum. Für Pendler ideal. Tastatur tippt sich angenehm leise." },
+    { "id": "r12", "rating": 3, "title": "Kein HDMI, kein SD", "author": "Wolfgang T.", "verified": true, "date": "2026-05-08", "text": "Für Fotografen ärgerlich: kein SD-Kartenslot, kein HDMI. Man braucht immer einen Adapter. Das MacBook Pro kann das, kostet aber deutlich mehr." },
+    { "id": "r13", "rating": 5, "title": "Ideal fürs Studium", "author": "Lea F.", "verified": true, "date": "2026-05-01", "text": "Leicht, leise, schneller Start. Halte damit problemlos einen Uni-Tag durch. Bekomme ich als Studentin irgendwo Rabatt? Auf der Seite habe ich dazu nichts gefunden." },
+    { "id": "r14", "rating": 5, "title": "Schneller als gedacht", "author": "Dominik P.", "verified": true, "date": "2026-04-25", "text": "Der M3 fliegt förmlich. Xcode-Builds und ein paar Docker-Container laufen erstaunlich flott für ein lüfterloses Gerät." },
+    { "id": "r15", "rating": 4, "title": "Schönes Gerät, Zubehör fehlt", "author": "Ramona K.", "verified": true, "date": "2026-04-19", "text": "Im Lieferumfang ist nur das Netzteil. Hülle, Hub und Maus muss man extra kaufen. Ein Zubehörpaket direkt beim Kauf hätte ich sofort mitgenommen." },
+    { "id": "r16", "rating": 5, "title": "Umstieg von Windows", "author": "Jens A.", "verified": true, "date": "2026-04-14", "text": "Erster Mac. Umstieg war einfacher als gedacht. Nur die Anschlussfrage hat mich vor dem Kauf verunsichert — welche Adapter brauche ich? Dazu fehlten Infos." },
+    { "id": "r17", "rating": 1, "title": "DOA — Gerät startete nicht", "author": "Markus E.", "verified": true, "date": "2026-04-10", "text": "Mein erstes Gerät ließ sich nicht einschalten. Austausch über Cyberport lief aber schnell und unkompliziert, daher kein Totalverlust. Trotzdem ärgerlich." },
+    { "id": "r18", "rating": 5, "title": "Perfekt für Consulting", "author": "Beraterin", "verified": true, "date": "2026-04-03", "text": "Ständig beim Kunden, ständig unterwegs. Leicht, edel, Akku hält Präsentationstage durch. Für den Außendienst top." },
+    { "id": "r19", "rating": 4, "title": "Gut, aber Konfigurator unübersichtlich", "author": "Oliver N.", "verified": true, "date": "2026-03-29", "text": "Beim Kauf war schwer zu verstehen, welche Variante welche GPU-Kerne hat. 8 oder 10 Core GPU? Der Unterschied war nirgends klar erklärt." },
+    { "id": "r20", "rating": 5, "title": "Beste Webcam bisher", "author": "Sandra Q.", "verified": true, "date": "2026-03-22", "text": "Die 1080p-Kamera macht in Videocalls einen echten Unterschied. Kollegen haben das Bild sofort gelobt." },
+    { "id": "r21", "rating": 5, "title": "Wertig und schnell", "author": "Tobias G.", "verified": true, "date": "2026-03-15", "text": "Aluminium-Gehäuse fühlt sich premium an. Startet in Sekunden aus dem Standby. Kein Vergleich zu meinem alten Arbeits-Laptop." },
+    { "id": "r22", "rating": 4, "title": "16 GB sind Pflicht", "author": "Hana Z.", "verified": true, "date": "2026-03-09", "text": "Gut, dass diese Variante 16 GB hat. Die 8-GB-Basis würde ich niemandem empfehlen, das wird bei mehreren Apps schnell eng. Sollte man auf der Seite deutlicher sagen." },
+    { "id": "r23", "rating": 5, "title": "Lautlos und kühl", "author": "Frank U.", "verified": true, "date": "2026-03-02", "text": "Kein Lüfter, kein Geräusch. Selbst bei längeren Videokonferenzen bleibt das Gerät angenehm kühl auf dem Schoß." },
+    { "id": "r23b", "rating": 5, "title": "Genau richtig für Office", "author": "Claudia W.", "verified": true, "date": "2026-02-27", "text": "Word, Excel, Teams, Browser mit vielen Tabs — alles flüssig. Für klassische Büroarbeit mehr als ausreichend." },
+    { "id": "r24", "rating": 3, "title": "Spiegelt bei Sonne", "author": "Uwe B.", "verified": true, "date": "2026-02-20", "text": "Das Display ist hell, spiegelt aber bei direkter Sonne stark. Draußen im Garten schwierig. Ansonsten gutes Gerät." },
+    { "id": "r25", "rating": 5, "title": "Für die ganze Familie", "author": "Melanie R.", "verified": true, "date": "2026-02-14", "text": "Nutzen es zu dritt. Schnell, einfach, zuverlässig. Speicher könnte für Familienfotos mehr sein, aber wir nutzen iCloud." },
+    { "id": "r26", "rating": 5, "title": "Reibungsloser Kauf", "author": "Georg S.", "verified": true, "date": "2026-02-07", "text": "Finanzierung über Cyberport war unkompliziert. 33 €/Monat sind gut machbar. So wurde das Gerät für mich erst leistbar." },
+    { "id": "r27", "rating": 4, "title": "Gutes Zweitgerät", "author": "Isabel M.", "verified": true, "date": "2026-01-30", "text": "Als leichtes Zweitgerät neben dem Desktop perfekt. Nur die zwei Ports nerven, wenn man laden und ein USB-Gerät gleichzeitig will." },
+    { "id": "r28", "rating": 5, "title": "Empfehlung für Selbstständige", "author": "Freelancer", "verified": true, "date": "2026-01-23", "text": "Rechnung mit ausgewiesener MwSt. war wichtig für mich als Selbstständigen — hat alles geklappt. Gerät läuft den ganzen Tag ohne Steckdose." },
+    { "id": "r29", "rating": 2, "title": "Preis kurz nach Kauf gefallen", "author": "Dieter H.", "verified": true, "date": "2026-01-16", "text": "Zwei Wochen nach meinem Kauf war das Gerät woanders 60 € günstiger. Ärgerlich. Eine Preisgarantie oder ein Hinweis auf Preisentwicklung wäre fair." },
+    { "id": "r30", "rating": 5, "title": "Schnell, leise, schön", "author": "Anja K.", "verified": true, "date": "2026-01-09", "text": "Was soll ich sagen — es macht einfach alles richtig. Der Umstieg vom Air M1 lohnt sich vor allem wegen des helleren Displays und der besseren Kamera." },
+    { "id": "r31", "rating": 4, "title": "Solide, aber teuer im Zubehör", "author": "Robert L.", "verified": true, "date": "2025-12-28", "text": "Gerät top. Aber Apple-Zubehör und Adapter treiben den Preis hoch. Ein transparentes Bundle wäre kundenfreundlich." },
+    { "id": "r32", "rating": 5, "title": "Perfekt für Homeoffice", "author": "Verena T.", "verified": true, "date": "2025-12-19", "text": "Leise, schnell, guter Bildschirm für Videocalls. Nach zwei Monaten immer noch begeistert. Klare Empfehlung." },
+    { "id": "r33", "rating": 4, "title": "Solide, nur Speicher planen", "author": "Martin O.", "verified": true, "date": "2025-12-11", "text": "Rundum zufrieden. Wer viele Fotos oder Videos hat, sollte aber gleich die größere SSD nehmen — Nachrüsten geht ja nicht." }
+  ]
+}

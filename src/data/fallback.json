@@ -1,0 +1,139 @@
+{
+  "_note": "Pre-generated silent fallback. Grounded on the exact reviews in macbook.json. Used only if the live LLM call fails, so the meeting never breaks.",
+  "insights": {
+    "themes": [
+      { "label": "256 GB Speicher zu knapp", "summary": "Wiederkehrende Klage, dass der Basisspeicher für 2026 zu klein ist; beeinflusst Zufriedenheit und Kaufreue.", "frequency": 4, "evidence": [ { "reviewId": "r02", "quote": "aber 256 GB sind 2026 einfach zu wenig. Nach Installation der Programme und ein paar Fotos war die SSD schon halb voll." }, { "reviewId": "r08", "quote": "Nach zwei Wochen war der Speicher voll. Für den Preis hätte mehr SSD drin sein müssen." } ] },
+      { "label": "Anschluss-/Adapter-Frust (nur 2 Ports)", "summary": "Nur zwei Thunderbolt-Ports, kein HDMI/SD; Kunden müssen Hubs/Adapter nachkaufen, teils überrascht.", "frequency": 4, "evidence": [ { "reviewId": "r06", "quote": "Einziger Kritikpunkt: nur zwei Ports, wir mussten für alle noch USB-C-Hubs dazukaufen." }, { "reviewId": "r12", "quote": "kein SD-Kartenslot, kein HDMI. Man braucht immer einen Adapter." } ] },
+      { "label": "Nur ein externer Monitor (unerwartet)", "summary": "Die Einschränkung auf ein externes Display bei offenem Deckel ist auf der Seite nicht klar; führt zu Fehlkäufen.", "frequency": 1, "evidence": [ { "reviewId": "r04", "quote": "Man kann standardmäßig nur EINEN externen Monitor anschließen. ... Das war auf der Produktseite nicht klar ersichtlich, sonst hätte ich das Pro genommen." } ] },
+      { "label": "Akku & lautloser Betrieb als Stärke", "summary": "Akkulaufzeit und lüfterloser, leiser Betrieb werden stark gelobt — klarer Verkaufshebel.", "frequency": 6, "evidence": [ { "reviewId": "r09", "quote": "Die 18 Stunden sind bei normaler Nutzung tatsächlich fast erreichbar." }, { "reviewId": "r03", "quote": "Das M3 bleibt kühl und leise, selbst bei Lightroom." } ] },
+      { "label": "Preisbewusstsein & Finanzierung", "summary": "Preisvergleich mit Wettbewerbern und Finanzierung sind kaufentscheidend; ein Kunde ärgerte sich über Preisverfall nach Kauf.", "frequency": 4, "evidence": [ { "reviewId": "r26", "quote": "Finanzierung über Cyberport war unkompliziert. 33 €/Monat sind gut machbar. So wurde das Gerät für mich erst leistbar." }, { "reviewId": "r29", "quote": "Zwei Wochen nach meinem Kauf war das Gerät woanders 60 € günstiger." } ] }
+    ],
+    "objections": [
+      { "label": "Speicher zu klein für den Preis", "evidence": [ { "reviewId": "r08", "quote": "Für den Preis hätte mehr SSD drin sein müssen." } ] },
+      { "label": "Zubehör nicht im Lieferumfang", "evidence": [ { "reviewId": "r15", "quote": "Im Lieferumfang ist nur das Netzteil. Hülle, Hub und Maus muss man extra kaufen." } ] },
+      { "label": "Konfigurator unübersichtlich", "evidence": [ { "reviewId": "r19", "quote": "8 oder 10 Core GPU? Der Unterschied war nirgends klar erklärt." } ] }
+    ],
+    "unansweredQuestions": [
+      { "question": "Welche Adapter/Hubs brauche ich für mein Setup?", "evidence": [ { "reviewId": "r16", "quote": "welche Adapter brauche ich? Dazu fehlten Infos." } ] },
+      { "question": "Gibt es einen Studierenden-/EDU-Rabatt?", "evidence": [ { "reviewId": "r13", "quote": "Bekomme ich als Studentin irgendwo Rabatt? Auf der Seite habe ich dazu nichts gefunden." } ] },
+      { "question": "Lohnt der Aufpreis gegenüber M2 / welche Variante passt?", "evidence": [ { "reviewId": "r10", "quote": "Frage mich nur, ob sich der Aufpreis zum M2 lohnt — dazu stand auf der Seite wenig Vergleichendes." } ] }
+    ],
+    "intentSignals": [
+      { "segment": "B2B / Firmenkunden", "signal": "Sammelbestellungen, MDM, Bedarf an Docks & Rechnung mit MwSt.", "evidence": [ { "reviewId": "r06", "quote": "Wir haben fünf Stück für unser Vertriebsteam bestellt. ... MDM-Integration lief problemlos." } ] },
+      { "segment": "Pendler / mobile Nutzer", "signal": "Gewicht und Akku als Kaufgrund", "evidence": [ { "reviewId": "r11", "quote": "1,24 kg merkt man im Rucksack kaum. Für Pendler ideal." } ] },
+      { "segment": "Studierende", "signal": "Suche nach Rabatt, Uni-Tauglichkeit", "evidence": [ { "reviewId": "r13", "quote": "Leicht, leise, schneller Start. Halte damit problemlos einen Uni-Tag durch." } ] }
+    ],
+    "hiddenStrengths": [
+      { "strength": "1080p-Webcam", "whyHidden": "Wird in Reviews stark gelobt, steht aber unter den Bullet-Points weit unten.", "evidence": [ { "reviewId": "r20", "quote": "Die 1080p-Kamera macht in Videocalls einen echten Unterschied." } ] },
+      { "strength": "16 GB RAM als Differenzierung", "whyHidden": "Der Vorteil gegenüber der 8-GB-Basis wird auf der Seite nicht klar herausgestellt.", "evidence": [ { "reviewId": "r22", "quote": "Gut, dass diese Variante 16 GB hat. Die 8-GB-Basis würde ich niemandem empfehlen." } ] }
+    ]
+  },
+  "hypotheses": {
+    "hypotheses": [
+      {
+        "id": "H1",
+        "statement": "Wenn wir auf der Produktseite einen prominenten 'Speicher-Wähler' mit klarer Empfehlung (256 vs. 512 GB, inkl. 'reicht für X Fotos/Apps') einblenden, dann steigt die Conversion auf höherwertige Varianten und sinkt die Retourenquote wegen Speichermangels.",
+        "evidence": [
+          { "type": "review", "reviewId": "r02", "quote": "Hätte gern die 512-GB-Version genommen, aber die war im Konfigurator schwer zu finden." },
+          { "type": "review", "reviewId": "r08", "quote": "Nach zwei Wochen war der Speicher voll." },
+          { "type": "page", "quote": "256 GB SSD nutzt einen einzelnen NAND-Chip (langsamer als 512 GB Variante) — steht unter der Falz." }
+        ],
+        "expectedEffect": { "metric": "Avg. order value / Upgrade-Rate", "direction": "up", "reasoning": "Kaufreue und sichtbare Nachfrage nach mehr Speicher zeigen Zahlungsbereitschaft; klare Entscheidungshilfe senkt Unsicherheit." },
+        "priority": { "score": 88, "rationale": "Hoher Hebel (AOV + Retouren), sehr dichte Evidenz (4 Rezensionen), gut testbar per DY-Widget." }
+      },
+      {
+        "id": "H2",
+        "statement": "Wenn wir einen 'Passendes Zubehör'-Block (Hub/Dock, Hülle) samt Bundle-Preis direkt auf der PDP zeigen und die 2-Port-Realität proaktiv adressieren, dann steigen Attach-Rate und Add-to-Cart, weil der häufigste Einwand vor dem Kauf gelöst wird.",
+        "evidence": [
+          { "type": "review", "reviewId": "r06", "quote": "Ein Bundle-Angebot mit Dock wäre praktisch gewesen." },
+          { "type": "review", "reviewId": "r15", "quote": "Ein Zubehörpaket direkt beim Kauf hätte ich sofort mitgenommen." },
+          { "type": "review", "reviewId": "r16", "quote": "welche Adapter brauche ich? Dazu fehlten Infos." }
+        ],
+        "expectedEffect": { "metric": "Attach-Rate / Umsatz pro Bestellung", "direction": "up", "reasoning": "Explizit geäußerte Kaufbereitschaft für Zubehör; adressiert zugleich einen Kauf-Blocker." },
+        "priority": { "score": 82, "rationale": "Direkter Umsatzhebel plus Einwandbehandlung, mehrfach belegt; einfache Umsetzung als DY-Empfehlungsblock." }
+      },
+      {
+        "id": "H3",
+        "statement": "Wenn wir die Einschränkung 'nur ein externes Display (bei offenem Deckel)' klar oberhalb der Falz erklären und auf Alternativen (Pro / Adapterlösung) hinweisen, dann sinken Fehlkäufe/Retouren und die Käufer-Zufriedenheit steigt.",
+        "evidence": [
+          { "type": "review", "reviewId": "r04", "quote": "Man kann standardmäßig nur EINEN externen Monitor anschließen. ... sonst hätte ich das Pro genommen." },
+          { "type": "page", "quote": "Unterstützung für zwei externe Displays NUR bei geschlossenem Deckel — aktuell weit unten auf der Seite." }
+        ],
+        "expectedEffect": { "metric": "Retourenquote / Support-Kontakte", "direction": "down", "reasoning": "Transparente Erwartung verhindert Fehlkauf; erhöht Vertrauen in die Seite." },
+        "priority": { "score": 71, "rationale": "Wichtiger Vertrauens-/Retourenhebel, aber Evidenz dünner (1 klare Rezension + Seitentatsache)." }
+      },
+      {
+        "id": "H4",
+        "statement": "Wenn wir die gelobte 1080p-Webcam und die 16-GB-RAM-Differenz als Nutzenversprechen oberhalb der Falz platzieren (statt tief in den Bullets), dann steigt die Add-to-Cart-Rate bei Videocall-/Office-Zielgruppen.",
+        "evidence": [
+          { "type": "review", "reviewId": "r20", "quote": "Die 1080p-Kamera macht in Videocalls einen echten Unterschied." },
+          { "type": "review", "reviewId": "r22", "quote": "Gut, dass diese Variante 16 GB hat. Die 8-GB-Basis würde ich niemandem empfehlen." }
+        ],
+        "expectedEffect": { "metric": "Add-to-Cart-Rate", "direction": "up", "reasoning": "Von Kunden real geschätzte Stärken sind auf der Seite unsichtbar; Sichtbarmachen hebt wahrgenommenen Wert." },
+        "priority": { "score": 64, "rationale": "Guter, günstig testbarer Content-Hebel; Effekt moderat, Evidenz solide aber nicht dominant." }
+      }
+    ]
+  },
+  "designs": {
+    "default": {
+      "hypothesisId": "H1",
+      "experimentName": "PDP · Speicher-Berater Widget",
+      "variantControl": "Aktuelle Produktseite ohne Speicher-Entscheidungshilfe.",
+      "variantTreatment": "Prominenter Speicher-Wähler oberhalb der Falz mit Empfehlung und Alltagsbezug ('256 GB ≈ X, 512 GB empfohlen für Fotos/Programme').",
+      "targetSegment": "Alle Nutzer auf der MacBook-Air-PDP (Desktop + Mobil)",
+      "primaryMetric": "Upgrade-Rate auf 512 GB",
+      "secondaryMetrics": ["Add-to-Cart-Rate", "Retourenquote wegen Speicher"],
+      "successCriterion": "+15% relative Upgrade-Rate bei 95% Signifikanz",
+      "suggestedDurationDays": 21,
+      "minSampleNote": "Annahme ~2.000 PDP-Sessions/Tag; Ziel ~40k Sessions je Variante."
+    },
+    "H1": {
+      "hypothesisId": "H1",
+      "experimentName": "PDP · Speicher-Berater Widget",
+      "variantControl": "Aktuelle Produktseite ohne Speicher-Entscheidungshilfe.",
+      "variantTreatment": "Prominenter Speicher-Wähler oberhalb der Falz mit Empfehlung und Alltagsbezug ('256 GB ≈ X, 512 GB empfohlen für Fotos/Programme').",
+      "targetSegment": "Alle Nutzer auf der MacBook-Air-PDP (Desktop + Mobil)",
+      "primaryMetric": "Upgrade-Rate auf 512 GB",
+      "secondaryMetrics": ["Add-to-Cart-Rate", "Retourenquote wegen Speicher"],
+      "successCriterion": "+15% relative Upgrade-Rate bei 95% Signifikanz",
+      "suggestedDurationDays": 21,
+      "minSampleNote": "Annahme ~2.000 PDP-Sessions/Tag; Ziel ~40k Sessions je Variante."
+    },
+    "H2": {
+      "hypothesisId": "H2",
+      "experimentName": "PDP · Zubehör-Bundle Block",
+      "variantControl": "PDP ohne Zubehör-Empfehlung.",
+      "variantTreatment": "'Passendes Zubehör'-Block mit Hub/Dock + Hülle als Bundle-Preis, inkl. Hinweistext zu 2 Ports.",
+      "targetSegment": "Alle Nutzer; verstärkt für B2B-Referrer/Firmenkonten",
+      "primaryMetric": "Attach-Rate (Zubehör pro MacBook-Bestellung)",
+      "secondaryMetrics": ["Umsatz pro Bestellung", "Add-to-Cart-Rate"],
+      "successCriterion": "+20% Attach-Rate bei 95% Signifikanz",
+      "suggestedDurationDays": 14,
+      "minSampleNote": "Bundle-Sichtbarkeit ab Warenkorb-Nähe; Traffic wie PDP-Baseline."
+    },
+    "H3": {
+      "hypothesisId": "H3",
+      "experimentName": "PDP · Display-Limit Klartext",
+      "variantControl": "Anschluss-/Display-Info tief in den Spezifikationen.",
+      "variantTreatment": "Klartext-Hinweis oberhalb der Falz zu 'ein externes Display' + Link zu Alternativen (Pro / DisplayLink-Dock).",
+      "targetSegment": "Nutzer mit Desktop-Referrer / mehrfachem Monitor-Interesse",
+      "primaryMetric": "Retourenquote (Grund: Anschlüsse/Display)",
+      "secondaryMetrics": ["Support-Kontakte", "PDP-Bounce"],
+      "successCriterion": "-10% relevante Retouren bei 90% Signifikanz",
+      "suggestedDurationDays": 28,
+      "minSampleNote": "Retouren sind selten → längere Laufzeit / gepoolte Auswertung nötig."
+    },
+    "H4": {
+      "hypothesisId": "H4",
+      "experimentName": "PDP · Nutzen oberhalb der Falz (Webcam & 16 GB)",
+      "variantControl": "Webcam- und RAM-Vorteil in den unteren Bullet-Points.",
+      "variantTreatment": "Webcam (1080p) und 16-GB-Vorteil als nutzenorientierte Value-Props oberhalb der Falz.",
+      "targetSegment": "Videocall-/Office-Zielgruppe (mobil + Desktop)",
+      "primaryMetric": "Add-to-Cart-Rate",
+      "secondaryMetrics": ["Scroll-Tiefe", "Verweildauer"],
+      "successCriterion": "+8% relative Add-to-Cart-Rate bei 95% Signifikanz",
+      "suggestedDurationDays": 14,
+      "minSampleNote": "Reiner Content-Test; Baseline-Traffic ausreichend."
+    }
+  }
+}
