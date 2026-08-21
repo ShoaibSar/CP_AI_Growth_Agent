@@ -4,7 +4,7 @@ import cors from 'cors'
 import OpenAI from 'openai'
 
 const PORT = process.env.PORT || 8787
-const MODEL = process.env.OPENAI_MODEL || 'gpt-5.4'
+const MODEL = process.env.OPENAI_MODEL || 'gpt-5.5'
 const apiKey = process.env.OPENAI_API_KEY
 
 const app = express()

@@ -17,6 +17,7 @@ Open **http://localhost:5173** and click **▶ Run the engine**.
 
 - `npm run dev` starts both the local API proxy (port **8787**) and the Vite app (port **5173**).
 - The API key lives only on the server (`server/index.js`) — it is never shipped to the browser.
+- The real `.env` file is ignored by Git. `.env.example` documents the required settings without containing a usable API key.
 
 ### Windows note
 The scripts use `concurrently`, which is cross‑platform. If you prefer two terminals:
@@ -57,7 +58,15 @@ Swap **one file**: `src/data/macbook.json`. Keep the same shape (`product`, `pri
 
 ## Model
 
-Default `claude-sonnet-5` (override with `ANTHROPIC_MODEL` in `.env`). Any strong reasoning model works.
+The project currently uses `gpt-5.5`. The server reads the model from `OPENAI_MODEL` in your local `.env` file and defaults to `gpt-5.5` when that variable is omitted.
+
+To use another model, change only this line in `.env`:
+
+```env
+OPENAI_MODEL=gpt-5.5
+```
+
+Replace `gpt-5.5` with another model available to your OpenAI API project. No frontend code changes are required.
 
 ## What this is / is not
 
