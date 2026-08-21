@@ -1,34 +1,66 @@
-# Hypothesis Engine in a Glass Box
+# AI Growth Hypothesis Engine
 
-**OMMAX × Cyberport — AI Growth Team demo.** A sales artifact (not production code) that shows a 5‑stage agentic pipeline working on **one real Cyberport product**: it mines German customer reviews, extracts insights, generates evidence‑grounded A/B‑test hypotheses, designs the tests in Dynamic‑Yield style, and renders a **simulated** DY push payload — all with the LLM reasoning streamed live in a glass box.
+An interactive, human-in-the-loop growth agent for product-page optimization. The application ingests product data and customer reviews, uses an OpenAI model to extract evidence-backed insights, generates prioritized A/B-test hypotheses, creates experiment designs, and renders a simulated Dynamic Yield payload.
 
----
+The interface exposes model output and system events in a glass-box reasoning view so every recommendation can be reviewed before it advances.
 
-## Quick start
+## Workflow
+
+1. **Data intake** - choose and ingest a product JSON file.
+2. **Insight extraction** - identify themes, objections, unanswered questions, intent signals, and hidden strengths.
+3. **Hypothesis generation** - create prioritized, evidence-backed A/B-test hypotheses.
+4. **Human review** - approve or reject each hypothesis.
+5. **Test design** - turn approved hypotheses into structured experiments.
+6. **Simulated push** - preview a Dynamic Yield-style payload without publishing it.
+
+## Technology
+
+- React 18, Vite, and Tailwind CSS
+- Express
+- OpenAI JavaScript SDK and Responses API
+- Server-Sent Events for streamed model output
+
+## Requirements
+
+- Git
+- Node.js 24 or newer
+- npm
+- An OpenAI API key with available API credits
+
+The user only needs to provide their own OpenAI API key. Everything else can be installed, built, started, and verified from the commands below. Create or manage a key in the [OpenAI API dashboard](https://platform.openai.com/api-keys).
+
+## Setup
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/ShoaibSar/CP_AI_Growth_Agent.git
 cd CP_AI_Growth_Agent
+```
+
+### 2. Install dependencies
+
+```bash
 npm install
 ```
 
-### Add the `.env` file
+### 3. Add the OpenAI API key
 
-Create the local environment file from the included template before running the app.
+Copy the public environment template to a local file named exactly `.env`.
 
-**Windows PowerShell:**
+Windows PowerShell:
 
 ```powershell
 Copy-Item .env.example .env
 ```
 
-**macOS/Linux:**
+macOS or Linux:
 
 ```bash
 cp .env.example .env
 ```
 
-Open `.env` and replace the placeholder with your OpenAI API key:
+Open `.env` and replace the placeholder with your own key:
 
 ```env
 OPENAI_API_KEY=your_real_openai_api_key
@@ -36,69 +68,193 @@ OPENAI_MODEL=gpt-5.5
 PORT=8787
 ```
 
-Keep `.env` private. It is excluded by `.gitignore` and must never be committed. The public `.env.example` contains only placeholders so other users know which variables the project requires.
+- `OPENAI_API_KEY` is the only value the user must supply.
+- `OPENAI_MODEL` selects the model. The configured default is `gpt-5.5`; it can be replaced with another model available to the user's OpenAI API project.
+- `PORT` controls the Express API port. The Vite proxy expects port `8787` by default.
 
-Start the application:
+Never commit `.env`. It is excluded by `.gitignore`. Do not put a real key in `.env.example`, source code, screenshots, issues, chat messages, or logs.
+
+### 4. Validate the project
+
+```bash
+npm run build
+```
+
+A successful build creates the ignored `dist/` directory and exits without errors.
+
+### 5. Start the application
 
 ```bash
 npm run dev
 ```
 
-Open **http://localhost:5173** and click **▶ Run the engine**.
+This starts both services:
 
-- `npm run dev` starts both the local API proxy (port **8787**) and the Vite app (port **5173**).
-- The API key lives only on the server (`server/index.js`) — it is never shipped to the browser.
-- The real `.env` file is ignored by Git. `.env.example` documents the required settings without containing a usable API key.
+- Frontend: [http://localhost:5173](http://localhost:5173)
+- API health check: [http://localhost:8787/api/health](http://localhost:8787/api/health)
 
-### Windows note
-The scripts use `concurrently`, which is cross‑platform. If you prefer two terminals:
+The health endpoint should return a response similar to:
 
-```bash
-npm run server
-```
-```bash
-npm run client
-```
-
----
-
-## How the demo runs
-
-| Stage | What happens | Source |
-|------|---------------|--------|
-| 1. Data intake | Cached product page, specs, price, competitor, 34 German reviews | `src/data/macbook.json` |
-| 2. Insight extraction | LLM mines themes, objections, open questions, intent signals | **live** |
-| 3. Hypothesis agent | 3–5 prioritized, **evidence‑grounded** hypotheses (real review quotes) | **live** |
-| 4. Test‑design agent | DY‑style test spec per approved hypothesis | **live** |
-| 5. Simulated DY push | Plausible DY API payload (JSON), clearly labeled **SIMULATED** | local |
-
-Stages 2–4 stream the model's reasoning into the **glass box** panel ("thinking out loud"). Every action and human decision is written to the **audit log**. Hypotheses have **Approve / Reject** buttons; only approved ones can be designed and pushed.
-
-- **UI language:** English. **Generated content (hypotheses, evidence, quotes):** German.
-- **Autonomy dial:** Advisory → Assisted → Autonomous, with **Advisory** highlighted as the current mode.
-- **"What this is / what this is not"** panel is always visible.
-
-## Reliability (the live run must not fail)
-
-- Every input is cached. If a live LLM call errors or fails to parse, the app **silently falls back** to a pre‑generated result set (`src/data/fallback.json`) — the meeting never breaks. A small "cached result shown" badge appears so *you* know, without derailing the demo.
-- Low temperature (0.2) and a hard evidence requirement in the prompts (`src/prompts/prompts.js`): a hypothesis without traceable evidence is dropped.
-
-## Running on REAL Cyberport data
-
-Swap **one file**: `src/data/macbook.json`. Keep the same shape (`product`, `price`, `competitor`, `page`, `specs`, `ratingSummary`, `reviews[]`). Paste the real cyberport.de reviews into `reviews` (keep them in original German, keep the `id`s). The live pipeline then reasons over genuine data with no other change. If you also want a matching silent fallback, regenerate `src/data/fallback.json` from a live run.
-
-## Model
-
-The project currently uses `gpt-5.5`. The server reads the model from `OPENAI_MODEL` in your local `.env` file and defaults to `gpt-5.5` when that variable is omitted.
-
-To use another model, change only this line in `.env`:
-
-```env
-OPENAI_MODEL=gpt-5.5
+```json
+{
+  "ok": true,
+  "liveAvailable": true,
+  "model": "gpt-5.5"
+}
 ```
 
-Replace `gpt-5.5` with another model available to your OpenAI API project. No frontend code changes are required.
+If `liveAvailable` is `false`, stop the server, confirm `.env` is in the repository root and contains `OPENAI_API_KEY`, then restart `npm run dev`.
 
-## What this is / is not
+## Use the application
 
-Outside‑in public data only · one product · human‑in‑the‑loop · **no** DY integration (push simulated) · **no** live crawling · **no** learning loop yet. Phase 2 runs this engine on Cyberport's real data exports; Phase 3 deploys via the DY API.
+1. Open [http://localhost:5173](http://localhost:5173).
+2. Select a JSON file in **Data intake**.
+3. Click **Ingest dataset**.
+4. Click **Run agents** and wait for insight extraction and hypothesis generation.
+5. Review the reasoning, evidence, and audit log.
+6. Approve or reject hypotheses.
+7. Click **Design test** on an approved hypothesis.
+8. Review the test design and simulated Dynamic Yield payload.
+
+## Product JSON examples
+
+Users can analyze the included product examples or add their own product and review data as JSON.
+
+Included datasets:
+
+- `src/data/macbook-pro-m5-cyberport.json` - real Cyberport snapshot with 14 supplied reviews. This dataset requires a successful live model call.
+- `src/data/macbook.json` - representative demonstration dataset with a cached fallback.
+
+A custom dataset should follow this structure:
+
+```json
+{
+  "product": {
+    "sku": "PRODUCT-001",
+    "name": "Example product",
+    "brand": "Example brand",
+    "category": "Example category",
+    "url": "https://example.com/product"
+  },
+  "price": {
+    "currency": "EUR",
+    "current": 999
+  },
+  "competitor": null,
+  "page": {
+    "headline": "Example product",
+    "bullets": ["Primary feature"],
+    "ctaPrimary": "Add to cart"
+  },
+  "specs": {
+    "memory": "16 GB",
+    "storage": "512 GB"
+  },
+  "ratingSummary": {
+    "average": 4.5,
+    "count": 1,
+    "distribution": { "5": 1, "4": 0, "3": 0, "2": 0, "1": 0 }
+  },
+  "reviews": [
+    {
+      "id": "review-001",
+      "rating": 5,
+      "title": "Excellent product",
+      "author": "Customer",
+      "verified": true,
+      "date": "2026-01-01",
+      "text": "Detailed customer review text."
+    }
+  ]
+}
+```
+
+To add a bundled product example:
+
+1. Save the JSON file in `src/data/`.
+2. Import it near the top of `src/App.jsx`.
+3. Add it to `DATASET_OPTIONS` with a filename, label, and imported data value.
+4. Run `npm run build` to validate the JSON and application.
+5. Restart `npm run dev`. The dataset will appear in the intake selector.
+
+Example registration in `src/App.jsx`:
+
+```js
+import exampleProduct from './data/example-product.json'
+
+const DATASET_OPTIONS = [
+  { file: 'example-product.json', label: 'Example product', data: exampleProduct }
+]
+```
+
+Keep the existing entries when adding a new one; the shortened array above only demonstrates the required object shape.
+
+## Instructions for OpenAI Codex
+
+Codex can perform the complete setup and verification workflow except supplying the user's private API key.
+
+When asked to run this repository, Codex should:
+
+1. Confirm Node.js and npm are installed.
+2. Run `npm install`.
+3. Check whether `.env` exists without displaying or logging its contents.
+4. If `.env` is missing, copy `.env.example` to `.env` and ask the user to add `OPENAI_API_KEY`. Never invent, request in chat, print, modify, or commit the key.
+5. Run `npm run build` and resolve build errors before starting the application.
+6. Run `npm run dev` and keep the process active.
+7. Verify `http://localhost:8787/api/health` returns `ok: true` and report whether `liveAvailable` is enabled.
+8. Open or provide `http://localhost:5173` for testing.
+9. Never add `.env`, `node_modules/`, `dist/`, or log files to Git.
+
+Copy-paste request for Codex:
+
+```text
+Set up and run this repository by following README.md. Do not read, print, modify, or commit my API key. Build the project, start both services, verify the API health endpoint, and give me the local frontend URL. If .env is missing, create it from .env.example and wait for me to add OPENAI_API_KEY.
+```
+
+## Commands
+
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Start the Express API and Vite frontend together |
+| `npm run server` | Start only the API on port `8787` |
+| `npm run client` | Start only the Vite frontend on port `5173` |
+| `npm run build` | Create a production frontend build |
+| `npm run preview` | Preview the production build locally |
+
+## Project structure
+
+```text
+server/index.js                 Express proxy and OpenAI streaming endpoint
+src/App.jsx                     Main workflow and application state
+src/engine.js                   Health check and stream client
+src/prompts/prompts.js          Agent prompts and simulated payload builder
+src/normalizers.js              Model-output normalization
+src/components/                 Interface components
+src/data/                       Product datasets and demo fallback
+.env.example                    Public environment-variable template
+```
+
+## Troubleshooting
+
+### The live model is unavailable
+
+- Confirm `.env` is in the repository root beside `package.json`.
+- Restart `npm run dev` after changing `.env`.
+- Open the health endpoint and confirm `liveAvailable` is `true`.
+- Confirm the key has API access and available credits.
+
+### The API reports a model error
+
+Change `OPENAI_MODEL` in `.env` to a model available to the user's OpenAI API project, restart the server, and verify the health endpoint reports the new model name.
+
+### A port is already in use
+
+Stop the process using ports `5173` or `8787`. If the API port changes, update the proxy target in `vite.config.js` too.
+
+### Windows certificate errors
+
+The server command uses Node's `--use-system-ca` option so the OpenAI SDK can use certificates trusted by Windows.
+
+## Scope
+
+This is a demonstration application based on local product snapshots and review data. Dynamic Yield integration is simulated. The project does not perform live crawling, production deployment, or autonomous experiment publishing.
