@@ -7,9 +7,40 @@
 ## Quick start
 
 ```bash
-cd glassbox
+git clone https://github.com/ShoaibSar/CP_AI_Growth_Agent.git
+cd CP_AI_Growth_Agent
 npm install
-cp .env.example .env   # then paste your OPENAI_API_KEY into .env
+```
+
+### Add the `.env` file
+
+Create the local environment file from the included template before running the app.
+
+**Windows PowerShell:**
+
+```powershell
+Copy-Item .env.example .env
+```
+
+**macOS/Linux:**
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and replace the placeholder with your OpenAI API key:
+
+```env
+OPENAI_API_KEY=your_real_openai_api_key
+OPENAI_MODEL=gpt-5.5
+PORT=8787
+```
+
+Keep `.env` private. It is excluded by `.gitignore` and must never be committed. The public `.env.example` contains only placeholders so other users know which variables the project requires.
+
+Start the application:
+
+```bash
 npm run dev
 ```
 
